@@ -21,6 +21,7 @@ boot = time.time()
 mongo = MongoCli(config.MONGO_URL)
 db = mongo.Anonymous
 OWNER = config.OWNER_ID
+COOWNER = config.COOWNER_ID
 
 class MickeyBot(Client):
     def __init__(self):
