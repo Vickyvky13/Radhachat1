@@ -1,6 +1,6 @@
 import psutil
 import time
-from MickeyBot import Client
+from Mickey import Client
 from pyrogram import filters 
 from pyrogram.types import Message
 
