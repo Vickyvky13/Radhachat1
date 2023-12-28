@@ -1,6 +1,6 @@
 import psutil
 import time
-from Mickey import MickeyBot
+from AnonXMusic import app as Client
 from pyrogram import filters 
 from pyrogram.types import Message
 
