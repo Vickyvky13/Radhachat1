@@ -3,7 +3,8 @@ from typing import Callable
 from pyrogram.enums import ChatMemberStatus
 from pyrogram.types import Message
 
-from Mickey import OWNER, MickeyBot 
+from Mickey import OWNER, MickeyBot
+from Mickey import COOWNER,MickeyBot
 
 
 def is_admins(func: Callable) -> Callable:
