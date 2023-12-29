@@ -2,7 +2,7 @@ from pyrogram.types import Message, ChatJoinRequest
 from pyrogram import filters
 from Abg.chat_status import adminsOnly
 from Abg.helpers import ikb
-from AnonXMusic import app
+from Mickey import app
 from pyrogram.errors import UserAlreadyParticipant, UserIsBlocked, PeerIdInvalid
 
 
