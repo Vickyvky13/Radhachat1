@@ -35,7 +35,7 @@ async def approve_join_chat(c, m):
 
 @MickeyBot.on_callback_query(filters.regex(r"^approve"))
 @adminsOnly("can_invite_users")
-async def approve_chat(c, q):
+async def approve_chat(c, q, m):
     i, user = q.data.split("_")
     try:
         await q.message.edit(f"#ɴᴇᴡ_ᴊᴏɪɴ\n✨ᴜsᴇʀ Jᴏɪɴ ʀᴇǫᴜᴇsᴛ ʜᴀs ʙᴇᴇɴ ᴀᴄᴄᴇᴘᴛᴇᴅ ʙʏ ||{q.from_user.mention}|| {m.from_user.mention}")
