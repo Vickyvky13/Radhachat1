@@ -9,7 +9,7 @@ from pyrogram.errors import UserAlreadyParticipant, UserIsBlocked, PeerIdInvalid
 
 
 
-@app.on_chat_join_request(filters.group | filters.channel & ~filters.private)
+@Client.on_chat_join_request(filters.group | filters.channel & ~filters.private)
 async def approve_join_chat(c, m):
     try:
         await c.send_message(
@@ -33,7 +33,7 @@ async def approve_join_chat(c, m):
     return
 
 
-@app.on_callback_query(filters.regex(r"^approve"))
+@Client.on_callback_query(filters.regex(r"^approve"))
 @adminsOnly("can_invite_users")
 async def approve_chat(c, q):
     i, user = q.data.split("_")
@@ -46,7 +46,7 @@ async def approve_chat(c, q):
         await q.message.edit(err)
 
 
-@app.on_callback_query(filters.regex(r"^declined"))
+@Client.on_callback_query(filters.regex(r"^declined"))
 @adminsOnly("can_invite_users")
 async def decline_chat(c, q):
     i, user = q.data.split("_")
