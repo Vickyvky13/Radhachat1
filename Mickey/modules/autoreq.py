@@ -2,7 +2,7 @@ from pyrogram.types import Message, ChatJoinRequest
 from pyrogram import filters
 from Abg.chat_status import adminsOnly
 from Abg.helpers import ikb
-from Mickey import app
+from Mickey import Client
 from pyrogram.errors import UserAlreadyParticipant, UserIsBlocked, PeerIdInvalid
 
 
