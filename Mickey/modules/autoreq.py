@@ -38,7 +38,7 @@ async def approve_join_chat(c, m):
 async def approve_chat(c, q):
     i, user = q.data.split("_")
     try:
-        await q.message.edit(f"#ɴᴇᴡ_ᴊᴏɪɴ\n✨approve_{m.from_user.id}ᴜsᴇʀ Jᴏɪɴ ʀᴇǫᴜᴇsᴛ ʜᴀs ʙᴇᴇɴ ᴀᴄᴄᴇᴘᴛᴇᴅ ʙʏ ||{q.from_user.mention}||")
+        await q.message.edit(f"#ɴᴇᴡ_ᴊᴏɪɴ\n✨approve_{q.from_user.id}ᴜsᴇʀ Jᴏɪɴ ʀᴇǫᴜᴇsᴛ ʜᴀs ʙᴇᴇɴ ᴀᴄᴄᴇᴘᴛᴇᴅ ʙʏ ||{q.from_user.mention}||")
         await c.approve_chat_join_request(q.message.chat.id, user)
     except UserAlreadyParticipant:
         await q.message.edit("ᴜsᴇʀ ᴀʟʀᴇᴀᴅʏ ɪɴ ɢʀᴏᴜᴘ .")
