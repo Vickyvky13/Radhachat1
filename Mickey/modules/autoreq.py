@@ -2,14 +2,14 @@ from pyrogram.types import Message, ChatJoinRequest
 from pyrogram import filters
 from Abg.chat_status import adminsOnly
 from Abg.helpers import ikb
-from Mickey import Client
+from Mickey import MickeyBot
 from pyrogram.errors import UserAlreadyParticipant, UserIsBlocked, PeerIdInvalid
 
 
 
 
 
-@Client.on_chat_join_request(filters.group | filters.channel & ~filters.private)
+@MickeyBot.on_chat_join_request(filters.group | filters.channel & ~filters.private)
 async def approve_join_chat(c, m):
     try:
         await c.send_message(
@@ -33,7 +33,7 @@ async def approve_join_chat(c, m):
     return
 
 
-@Client.on_callback_query(filters.regex(r"^approve"))
+@MickeyBot.on_callback_query(filters.regex(r"^approve"))
 @adminsOnly("can_invite_users")
 async def approve_chat(c, q):
     i, user = q.data.split("_")
@@ -46,7 +46,7 @@ async def approve_chat(c, q):
         await q.message.edit(err)
 
 
-@Client.on_callback_query(filters.regex(r"^declined"))
+@MickeyBot.on_callback_query(filters.regex(r"^declined"))
 @adminsOnly("can_invite_users")
 async def decline_chat(c, q):
     i, user = q.data.split("_")
