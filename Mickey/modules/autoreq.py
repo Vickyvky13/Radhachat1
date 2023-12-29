@@ -42,10 +42,10 @@ async def approve_chat(c, q):
         new_member = await c.get_users(user_id)  # Fetch details of the new member
         mention = new_member.mention(style="html")  # Get mention format of the user ID
 
-        await q.message.edit(f"#ɴᴇᴡ_ᴊᴏɪɴ\n✨ {mention} join request has been accepted by || {q.from_user.mention} ||")
+        await q.message.edit(f"#ɴᴇᴡ_ᴊᴏɪɴ\n✨ᴛʜɪѕ {mention} ᴊᴏɪɴ ʀᴇǫᴜᴇsᴛ ʜᴀs ʙᴇᴇɴ ᴀᴄᴄᴇᴘᴛᴇᴅ ʙʏ || {q.from_user.mention} ||")
         await c.approve_chat_join_request(q.message.chat.id, user_id)
     except UserAlreadyParticipant:
-        await q.message.edit("User is already in the group.")
+        await q.message.edit("ᴜsᴇʀ ɪs ᴀʟʀᴇᴀᴅʏ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ.")
     except Exception as err:
         await q.message.edit(str(err))
 
@@ -59,10 +59,10 @@ async def decline_chat(c, q):
         new_member = await c.get_users(user_id)  # Fetch details of the new member
         mention = new_member.mention(style="html")  # Get mention format of the user ID
 
-        await q.message.edit(f"#ᴅᴇᴄʟɪɴᴇᴅ\n💔 {mention} join request has been declined by || {q.from_user.mention} ||")
+        await q.message.edit(f"#ᴅᴇᴄʟɪɴᴇᴅ\n💔ᴛʜɪѕ {mention} ᴊᴏɪɴ ʀᴇǫᴜᴇꜱᴛ ʜᴀꜱ ʙᴇᴇɴ ᴅᴇᴄʟɪɴᴇᴅ ʙʏ || {q.from_user.mention} ||")
         await c.decline_chat_join_request(q.message.chat.id, user_id)
     except UserAlreadyParticipant:
-        await q.message.edit("User is already in the group.")
+        await q.message.edit("ᴜsᴇʀ ɪs ᴀʟʀᴇᴀᴅʏ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ.")
     except Exception as err:
         await q.message.edit(str(err))
         
