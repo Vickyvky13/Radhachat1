@@ -2,11 +2,9 @@ from config import OWNER_USERNAME, SUPPORT_GRP
 from Mickey import MickeyBot
 
 START = f"""
-**๏ ʜᴇʏ, ✨[{message.from_user.first_name}](tg://user?id={message.from_user.id}) ɪ ᴀᴍ [{MickeyBot.name}](t.me/{MickeyBot.username})**
+**๏ ʜᴇʏ, ɪ ᴀᴍ [{MickeyBot.name}](t.me/{MickeyBot.username})**
 **➻ ᴀɴ ᴀɪ ʙᴀsᴇᴅ ᴄʜᴀᴛʙᴏᴛ**
-**──────────────**
-**➻ ᴜsᴀɢᴇ /chatbot [ᴏɴ/ᴏғғ]**
-<b>||๏ ʜɪᴛ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ғᴏʀ ʜᴇʟᴘ.||</b>
+**──────────────**</b>
 """
 
 HELP_READ = f"""
